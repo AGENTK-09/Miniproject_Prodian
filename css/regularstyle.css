@@ -1,0 +1,100 @@
+/* Body */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0ffff; 
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 1rem 0; 
+    margin-top: auto; 
+}
+
+.footer-logo {
+    width: 100px;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #dcdcdc;
+}
+
+.text-center p {
+    margin: 0;
+}
+
+
+/* Navbar */
+.navbar{
+    background-color: #f5f5dc;
+}
+.navbar-brand {
+    color: #ffffff;
+}
+
+.nav-link {
+    color: #ffffff;
+}
+
+.nav-link:hover {
+    color: #dcdcdc;
+}
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"%3E%3Cpath stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /%3E%3C/svg%3E');
+} 
+
+
+/* Card */
+.card {
+    border: none;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+} 
+
+.card-text {
+    color: #6c757d;
+}
+
+.img-fluid {
+    border-radius: 0.5rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.container {
+    flex: 1; 
+}
