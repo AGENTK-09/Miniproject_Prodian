@@ -1,0 +1,77 @@
+{
+    
+     "data": [ 
+            {
+                "id" : 1,
+                "title" : "Regular Cake",
+                "img" : "../assets/regular_cake.webp",
+                "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dignissimos accusantium amet similique velit iste.",
+                "price" : "190$",
+                "url" : "regular_cake.html"
+            },
+            {
+                "id" : 2,
+                "title" : "Gourmet Cake",
+                "img" : "../assets/gourmet_cake.webp",
+                "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dignissimos accusantium amet similique velit iste.",
+                "price" : "190$",
+                "url" : "gourmet_cake.html"
+            },
+            {
+                "id" : 3,
+                "title" : "Photo Cake",
+                "img" : "../assets/photo_cake.webp",
+                "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dignissimos accusantium amet similique velit iste.",
+                "price" : "190$",
+                "url" : "photo_cake.html"
+            },
+            {
+                "id" : 4,
+                "title" : "Theme Cake",
+                "img" : "../assets/theme_cake.webp",
+                "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dignissimos accusantium amet similique velit iste.",
+                "price" : "190$",
+                "url" : "theme_cake.html"
+            },
+            {
+                "id" : 5,
+                "title" : "Photo Pulling Cake",
+                "img" : "../assets/photo_pulling_cake.webp",
+                "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dignissimos accusantium amet similique velit iste.",
+                "price" : "190$",
+                "url" : "photo_pulling_cake.html"
+            },
+            {
+                "id" : 6,
+                "title" : "Pinata Cake",
+                "img" : "../assets/pinata_cake.webp",
+                "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dignissimos accusantium amet similique velit iste.",
+                "price" : "190$",
+                "url" : "pinata_cake.html"
+            },
+            {
+                "id" : 7,
+                "title" : "Pull me Up Cake",
+                "img" : "../assets/pull_me_up_cake.webp",
+                "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dignissimos accusantium amet similique velit iste.",
+                "price" : "190$",
+                "url" : "pull_me_up.html"
+            },
+            {
+                "id" : 8,
+                "title" : "Cake Jars",
+                "img" : "../assets/cake_jar.webp",
+                "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dignissimos accusantium amet similique velit iste.",
+                "price" : "190$",
+                "url" : "cake_jars.html"
+            },
+            {
+                "id" : 9,
+                "title" : "Brownies",
+                "img" : "../assets/brownies.jpg",
+                "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dignissimos accusantium amet similique velit iste.",
+                "price" : "190$",
+                "url" : "brownies.html"
+            }
+        ]
+}
