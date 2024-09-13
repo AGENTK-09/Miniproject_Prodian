@@ -1,13 +1,18 @@
 const cardmain = document.querySelector('.cardmain');
+const searchBtn = document.querySelector('.search-btn')
+const dataArray = [];
 
 async function fetchdata(){ 
     try {
         const res = await fetch('data.json');
         if (!res.ok) {
             console.log('Response not found');
-            return;  // Exit if there's an issue with the response
+            return; 
         }
         const someData = await res.json();
+        if(someData){
+            dataArray.push(someData.data);
+        }
         
         someData.data.map((data, id) => {
             const card = document.createElement('div');
@@ -43,12 +48,73 @@ async function fetchdata(){
     }
 }
 
+document.getElementById('video').addEventListener('click', function() {
+    const background = document.getElementById('bg-container');
+
+    document.getElementById("over").style.position="fixed";
+})
+
 // Fetch the data once the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', fetchdata);
 
+//search functionality
+async function searchfunction(data){
+    console.log(data);
+    cardmain.innerHTML = '';
+    data.map((data, id) => {
+        const card = document.createElement('div');
+        card.classList.add('cards');
+        card.setAttribute('data-aos', 'fade-up');
+
+        card.innerHTML = `
+                <div class="card mb-4 key = ${id}">
+                    <img src="${data.img}" class="card-img-top" alt="${data.title}"></img>
+                    <div class="card-body">
+                        <h5 class="card-title">${data.title}</h5>
+                        <p class="card-text">${data.description}</p>
+                    </div>
+                    <div class="mb-5 d-flex justify-content-around">
+                        <h3>${data.price}</h3>
+                        <button class="btn btn-primary buy-btn" data-url="${data.url}">Buy Now</button>
+                    </div>
+                </div>`;
+        
+        cardmain.appendChild(card);
+})
+}
+
+function filtercards(){
+    
+    const input = document.querySelector('.input').value.toLowerCase();
+    const filterValues = dataArray[0].filter(item => item.title.toLowerCase().includes(input));
+    searchfunction(filterValues);
+}
+
+searchBtn.addEventListener('click', filtercards);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+// document.getElementById('video').addEventListener('click', function () {
+//     const overlay = document.getElementById('over');
+//     const bgContainer = document.getElementById('background-container');
+    
+//     // Toggle overlay visibility and blur background
+//     overlay.style.display = (overlay.style.display === 'block' ? 'none' : 'block');
+//     bgContainer.classList.toggle('blurred');
+// });
+
+//search functionality
 
 
 
@@ -56,32 +122,3 @@ document.addEventListener('DOMContentLoaded', fetchdata);
 // fetch("data.json").then((res) => res.json())
 //     .then((data) => console.log(data))
 //         .catch((error) => console.error("Unable to fetch data", error))
-
-
-// fetchdata(); 
-
-// function displayproducts(products){
-//     const container = document.getElementsByClassName("card"); //get container where we want to insert the prod
-//     container.innerHTML = ''; // to clear the container for inserting other new content
-
-//     products.forEach((product) => {
-//         const productHTML = 
-//             `<div class="col-md-4">
-//                 <div class="card mb-4">
-//                     <img src="${product.img}" class="card-img-top" alt="${product.title}"></img>
-//                     <div class="card-body">
-//                         <h5 class="card-title">${product.title}</h5>
-//                         <p class="card-text">${product.description}</p>
-//                     </div>
-//                     <div class="mb-5 d-flex justify-content-around">
-//                         <h3>$${product.price}</h3>
-//                         <a href="${product.url}" class="btn btn-primary">Buy Now</a>
-//                     </div>
-//                 </div>
-//             </div>`;
-    
-//         container.insertAdjacentHTML('beforeend', productHTML);
-//     });
-// }
-
-// document.addEventListener('DOMContentLoaded', fetchproducts);
